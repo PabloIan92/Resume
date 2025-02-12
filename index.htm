@@ -1,320 +1,163 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
+    <title>Page not found · GitHub Pages</title>
+    <style type="text/css" media="all">
+      /* Estilos Generales */
+      body {
+        background-color: #f1f1f1;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 297mm; /* Altura de A4 */
+        width: 210mm;  /* Ancho de A4 */
+        box-sizing: border-box;
+      }
+
+      .container { 
+        margin: 0;
+        width: 100%;
+        max-width: 190mm; /* Margen de 10mm a cada lado */
+        text-align: center; 
+        background-color: white;
+        padding: 20mm;
+        box-sizing: border-box;
+        box-shadow: none;
+      }
+
+      a { color: #4183c4; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      h1 { 
+        letter-spacing: -1px; 
+        line-height: 1.2; 
+        font-size: 36pt; 
+        font-weight: 100; 
+        margin: 0px 0 20px 0; 
+        text-shadow: 0 1px 0 #fff; 
+      }
+      p { 
+        color: rgba(0, 0, 0, 0.7); 
+        margin: 10px 0; 
+        line-height: 1.5; 
+        font-size: 12pt;
+      }
+
+      ul { 
+        list-style: none; 
+        margin: 15px 0; 
+        padding: 0; 
+      }
+      li { 
+        display: inline-block; 
+        font-weight: bold; 
+        margin: 0 5px; 
+      }
+
+      .logo { 
+        display: inline-block; 
+        margin-top: 20px; 
+      }
+      .logo-img-2x { display: none; }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .logo-img-1x { display: none; }
+        .logo-img-2x { display: inline-block; }
+      }
+
+      #suggestions {
+        margin-top: 20px;
+        color: #666;
+      }
+      #suggestions a {
+        color: #666666;
+        font-weight: 200;
+        font-size: 10pt;
+        margin: 0 5px;
+      }
+
+      /* Estilos para Impresión */
+      @media print {
+        @page {
+          size: A4;
+          margin: 10mm;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
+          background-color: white;
         }
 
         .container {
-            width: 100%;
-            max-width: 210mm; /* Tamaño A4 */
-            margin: 20mm auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20mm;
+          max-width: 190mm;
+          padding: 0;
         }
 
-        .header {
-            background-color: #3498db; /* Fondo azul */
-            color: white;
-            padding: 10mm;
-            border-radius: 5px;
-            text-align: center;
-            margin-bottom: 20mm;
+        h1 {
+          font-size: 30pt;
+          margin: 20mm 0 10mm 0;
         }
 
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
+        p {
+          font-size: 11pt;
+          margin: 5mm 0;
         }
 
-        .header p {
-            font-size: 1.2em;
-            margin-top: 5mm;
-            color: #dcdcdc;
+        #suggestions a {
+          font-size: 10pt;
+          margin: 0 3mm;
         }
 
-        .contact-info {
-            margin-top: 10mm;
-            font-size: 1.2em;
-            color: #dcdcdc;
+        .logo {
+          margin-top: 10mm;
         }
-
-        .main-content {
-            margin-top: 20mm;
-        }
-
-        .section {
-            margin-bottom: 15mm;
-        }
-
-        .section-title {
-            font-size: 1.3em;
-            font-weight: 500;
-            color: #2c3e50;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 5px;
-        }
-
-        .summary-box {
-            background: #f8f9fa;
-            padding: 10mm;
-            border-radius: 5px;
-            border-left: 3px solid #3498db;
-            margin-bottom: 20mm;
-        }
-
-        .job {
-            margin-bottom: 15mm;
-        }
-
-        .job-title {
-            font-size: 1.2em;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-
-        .company {
-            color: #3498db;
-            font-weight: 500;
-        }
-
-        .date {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            margin-bottom: 5mm;
-        }
-
-        .achievements {
-            margin-top: 5mm;
-            font-size: 1em;
-        }
-
-        .achievement {
-            margin: 5mm 0;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .achievement:before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15mm;
-            margin-top: 15mm;
-        }
-
-        .skill-category {
-            background: #f8f9fa;
-            padding: 10mm;
-            border-radius: 5px;
-            border-left: 3px solid #3498db;
-        }
-
-        .skill-category h4 {
-            font-size: 1.1em;
-            margin-bottom: 10mm;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 5mm;
-        }
-
-        .education-item {
-            background: #f8f9fa;
-            padding: 10mm;
-            border-radius: 5px;
-            border-left: 3px solid #3498db;
-            margin-bottom: 15mm;
-        }
-
-        .education-item strong {
-            display: block;
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 5mm;
-        }
-
-        .education-item p {
-            font-size: 1em;
-            margin-bottom: 5mm;
-            color: #666;
-        }
-
-        .education-item small {
-            font-size: 0.9em;
-            color: #3498db;
-        }
-
-        .language-item {
-            background: #f8f9fa;
-            padding: 10mm;
-            border-radius: 5px;
-            margin-bottom: 10mm;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .language-level {
-            background: #3498db;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-
-            .container {
-                box-shadow: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .header {
-                background: #3498db;
-                color: white;
-                padding: 10mm;
-                border-radius: 5px;
-                text-align: center;
-                margin-bottom: 20mm;
-            }
-
-            .header h1, .header p {
-                color: white;
-            }
-
-            .contact-info {
-                font-size: 1.2em;
-                margin-top: 10mm;
-                color: white;
-            }
-        }
-
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+
     <div class="container">
-        <div class="header">
-            <h1>Pablo Ian Laurino</h1>
-            <p>Full Stack Developer & Technical Supervisor</p>
-            <div class="contact-info">
-                <span>📍 Rosario, Argentina</span><br>
-                <span>📧 pablolaurino@gmail.com</span><br>
-                <span>📱 +549341304815</span>
-            </div>
-        </div>
 
-        <div class="main-content">
-            <div class="section">
-                <div class="section-title">Professional Summary</div>
-                <div class="summary-box">
-                    <p>Experienced Technical Supervisor and Full Stack Developer with MTCNA certification, specializing in network infrastructure and team leadership. Proven expertise in FTTH technology, wireless networks, and customer service excellence. Demonstrated ability to lead technical teams and implement efficient solutions in fast-paced environments.</p>
-                </div>
-            </div>
+      <h1>404</h1>
+      <p><strong>File not found</strong></p>
 
-            <div class="section">
-                <div class="section-title">Professional Experience</div>
+      <p>
+        The site configured at this address does not
+        contain the requested file.
+      </p>
 
-                <div class="job">
-                    <div class="job-title">Administrative and Technical Supervisor</div>
-                    <div class="company">Lemmon Internet SRL - Rosario, Argentina </div>
-                    <div class="date">November 2019 - Present</div>
-                    <div class="achievements">
-                        <p class="achievement">Leveraged MTCNA certification to provide expert-level network configuration and troubleshooting</p>
-                        <p class="achievement">Managed and resolved complex technical issues related to FTTH and Wireless technologies</p>
-                        <p class="achievement">Implemented advanced MikroTik router configurations and network optimizations</p>
-                        <p class="achievement">Demonstrated expertise in network architecture, including public/private IP configurations</p>
-                        <p class="achievement">Supervised technical support team handling connectivity issues and network deployments</p>
-                        <p class="achievement">Developed and maintained documentation for network protocols and troubleshooting procedures</p>
-                        <p class="achievement">Led technical training sessions focusing on FTTH technology and MikroTik implementations</p>
-                    </div>
-                </div>
+      <p>
+        If this is your site, make sure that the filename case matches the URL
+        as well as any file permissions.<br>
+        For root URLs (like <code>http://example.com/</code>) you must provide an
+        <code>index.html</code> file.
+      </p>
 
-                <div class="job">
-                    <div class="job-title">Technical Support Specialist</div>
-                    <div class="company">Dynatachphone Rosario, Argentina</div>
-                    <div class="date">February 2014 - October 2019</div>
-                    <div class="achievements">
-                        <p class="achievement">Marketed company products and plans to clients across Argentina</p>
-                        <p class="achievement">Provided guidance for matching customer requirements with company services</p>
-                        <p class="achievement">Enhanced customer experience during support interactions</p>
-                    </div>
-                </div>
-            </div>
+      <p>
+        <a href="https://help.github.com/pages/">Read the full documentation</a>
+        for more information about using <strong>GitHub Pages</strong>.
+      </p>
 
-            <div class="section">
-                <div class="section-title">Education</div>
-                <div class="education-item">
-                    <strong>Full Stack Developer Certification</strong>
-                    <p>EGG Online Platform - Argentina Programa Scholarship</p>
-                    <small>December 2022 - September 2023</small>
-                </div>
-                <div class="education-item">
-                    <strong>Secondary Technical Education</strong>
-                    <p>E.E.T n°6 (Technical High School)</p>
-                    <p>March 2004 - December 2010</p>
-                    <p>Rosario, Santa Fe</p>
-                </div>
-            </div>
+      <div id="suggestions">
+        <a href="https://githubstatus.com">GitHub Status</a> &mdash;
+        <a href="https://twitter.com/githubstatus">@githubstatus</a>
+      </div>
 
-            <div class="section">
-                <div class="section-title">Technical Skills</div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Networking</h4>
-                        <p class="achievement">FTTH Technology</p>
-                        <p class="achievement">Wireless Networks</p>
-                        <p class="achievement">IP Networking (Public/Private)</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Certifications</h4>
-                        <p class="achievement"><strong>Full Stack Developer</strong> - EGG Cooperation</p>
-                        <p>Argentina Programa 4.0</p>
-                        <small>Obtained: October 2023</small>
-                        <p class="achievement"><strong>MTCNA</strong> - MikroTik Certified Network Associate</p>
-                        <small>Valid until: 2027</small>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Leadership</h4>
-                        <p class="achievement">Technical Team Management</p>
-                        <p class="achievement">Staff Training & Development</p>
-                        <p class="achievement">Problem Solving</p>
-                    </div>
-                </div>
-            </div>
+      <a href="/" class="logo logo-img-1x">
+        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpieA==">
+      </a>
 
-            <div class="section">
-                <div class="section-title">Languages</div>
-                <div class="language-item">
-                    <span><strong>English:</strong></span>
-                    <span class="language-level">Advanced</span>
-                </div>
-                <div class="language-item">
-                    <span><strong>Spanish:</strong></span>
-                    <span class="language-level">Native</span>
-                </div>
-            </div>
-        </div>
+      <a href="/" class="logo logo-img-2x">
+        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpieA==" >
+      </a>
     </div>
-</body>
+  </body>
 </html>
