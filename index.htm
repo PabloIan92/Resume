@@ -3,66 +3,64 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <title>Page not found · GitHub Pages</title>
-    <style type="text/css" media="all">
-      /* Estilos Generales */
+    <title>Page not found &middot; GitHub Pages</title>
+    <style type="text/css" media="screen">
       body {
         background-color: #f1f1f1;
         margin: 0;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 297mm; /* Altura de A4 */
-        width: 210mm;  /* Ancho de A4 */
-        box-sizing: border-box;
       }
 
       .container { 
-        margin: 0;
-        width: 100%;
-        max-width: 190mm; /* Margen de 10mm a cada lado */
+        margin: 50px auto 40px auto; 
+        width: 600px; 
         text-align: center; 
-        background-color: white;
-        padding: 20mm;
-        box-sizing: border-box;
-        box-shadow: none;
       }
 
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { 
-        letter-spacing: -1px; 
-        line-height: 1.2; 
-        font-size: 36pt; 
-        font-weight: 100; 
-        margin: 0px 0 20px 0; 
-        text-shadow: 0 1px 0 #fff; 
+      a { 
+        color: #4183c4; 
+        text-decoration: none; 
       }
+      a:hover { 
+        text-decoration: underline; 
+      }
+
+      /* Encabezado azul */
+      h1 {
+        background-color: #4183c4; /* Azul */
+        color: white;
+        padding: 20px;
+        font-size: 60px;
+        font-weight: 100;
+        margin: 0px 0 50px 0;
+        text-shadow: 0 1px 0 #fff;
+        text-align: center;
+      }
+
       p { 
-        color: rgba(0, 0, 0, 0.7); 
-        margin: 10px 0; 
-        line-height: 1.5; 
-        font-size: 12pt;
+        color: rgba(0, 0, 0, 0.5); 
+        margin: 20px 0; 
+        line-height: 1.6; 
       }
 
       ul { 
         list-style: none; 
-        margin: 15px 0; 
+        margin: 25px 0; 
         padding: 0; 
       }
       li { 
-        display: inline-block; 
+        display: table-cell; 
         font-weight: bold; 
-        margin: 0 5px; 
+        width: 1%; 
       }
 
       .logo { 
         display: inline-block; 
-        margin-top: 20px; 
+        margin-top: 35px; 
       }
-      .logo-img-2x { display: none; }
+      .logo-img-2x { 
+        display: none; 
+      }
       @media
       only screen and (-webkit-min-device-pixel-ratio: 2),
       only screen and (   min--moz-device-pixel-ratio: 2),
@@ -70,56 +68,25 @@
       only screen and (        min-device-pixel-ratio: 2),
       only screen and (                min-resolution: 192dpi),
       only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
+        .logo-img-1x { 
+          display: none; 
+        }
+        .logo-img-2x { 
+          display: inline-block; 
+        }
       }
 
       #suggestions {
-        margin-top: 20px;
-        color: #666;
+        margin-top: 35px;
+        color: #ccc;
       }
       #suggestions a {
         color: #666666;
         font-weight: 200;
-        font-size: 10pt;
-        margin: 0 5px;
+        font-size: 14px;
+        margin: 0 10px;
       }
 
-      /* Estilos para Impresión */
-      @media print {
-        @page {
-          size: A4;
-          margin: 10mm;
-        }
-
-        body {
-          background-color: white;
-        }
-
-        .container {
-          max-width: 190mm;
-          padding: 0;
-        }
-
-        h1 {
-          font-size: 30pt;
-          margin: 20mm 0 10mm 0;
-        }
-
-        p {
-          font-size: 11pt;
-          margin: 5mm 0;
-        }
-
-        #suggestions a {
-          font-size: 10pt;
-          margin: 0 3mm;
-        }
-
-        .logo {
-          margin-top: 10mm;
-        }
-      }
     </style>
   </head>
   <body>
@@ -152,12 +119,10 @@
       </div>
 
       <a href="/" class="logo logo-img-1x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpieA==">
+        <img width="32" height="32" title="" alt="" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAA...">
       </a>
 
-      <a href="/" class="logo logo-img-2x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpieA==" >
-      </a>
     </div>
+
   </body>
 </html>
