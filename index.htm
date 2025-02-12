@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 40px;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.header p {
+    margin: 10px 0 0;
+    opacity: 0.9;
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title:after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e0e0e0;
+    margin-left: 15px;
+}
+
+.summary-box {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+    margin-bottom: 30px;
+}
+
+.job {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 2px solid #3498db;
+}
+
+.job-title {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.company {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.achievements {
+    margin-top: 10px;
+}
+
+.achievement {
+    margin: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.achievement:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.skill-category h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.education-item strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.education-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.education-item small {
+    color: #3498db;
+    display: block;
+    margin-top: 5px;
+}
+
+.language-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-level {
+    background: #3498db;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .container {
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+    }
+    .header {
+        background: #2c3e50;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Pablo Ian Laurino</h1>
+        <p>Full Stack Developer & Technical Supervisor</p>
+        <div class="contact-info">
+            <span>📍 Rosario, Argentina</span>
+            <span>📧 pablolaurino@gmail.com</span>
+            <span>📱 +549341304815</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary-box">
+                <p>Experienced Technical Supervisor and Full Stack Developer with MTCNA certification, specializing in network infrastructure and team leadership. Proven expertise in FTTH technology, wireless networks, and customer service excellence. Demonstrated ability to lead technical teams and implement efficient solutions in fast-paced environments.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="job">
+                <div class="job-title">Administrative and Technical Supervisor</div>
+                <div class="company">Lemmon Internet SRL - Rosario, Argentina </div>
+                <div class="date">November 2019 - Present</div>
+                <div class="achievements">
+                    <p class="achievement">Leveraged MTCNA certification to provide expert-level network configuration and troubleshooting</p>
+                    <p class="achievement">Managed and resolved complex technical issues related to FTTH and Wireless technologies</p>
+                    <p class="achievement">Implemented advanced MikroTik router configurations and network optimizations</p>
+                    <p class="achievement">Demonstrated expertise in network architecture, including public/private IP configurations</p>
+                    <p class="achievement">Supervised technical support team handling connectivity issues and network deployments</p>
+                    <p class="achievement">Developed and maintained documentation for network protocols and troubleshooting procedures</p>
+                    <p class="achievement">Led technical training sessions focusing on FTTH technology and MikroTik implementations</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Technical Support Specialist</div>
+                <div class="company">Dynatachphone Rosario, Argentina</div>
+                <div class="date">February 2014 - October 2019</div>
+                <div class="achievements">
+                    <p class="achievement">Marketed company products and plans to clients across Argentina</p>
+                    <p class="achievement">Provided guidance for matching customer requirements with company services</p>
+                    <p class="achievement">Enhanced customer experience during support interactions</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-title">President's Assistant</div>
+                <div class="company">The Church of Jesus Christ of Latter-day Saints, Panama</div>
+                <div class="date">December 2011 - December 2013</div>
+                <div class="achievements">
+                    <p class="achievement">Trained 250 missionaries from different countries in their respective duties</p>
+                    <p class="achievement">Organized and supervised missionary work</p>
+                    <p class="achievement">Assisted in finding solutions to migration and financial issues</p>
+                    <p class="achievement">Managed administrative tasks and coordinated team activities</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Technical Care Representative</div>
+                <div class="company">Teletech Rosario, Argentina</div>
+                <div class="date">October 2010 - November 2011</div>
+                <div class="achievements">
+                    <p class="achievement">Managed claims from American English-speaking T-mobile customers</p>
+                    <p class="achievement">Troubleshot smartphones and provided technical support</p>
+                    <p class="achievement">Offered solutions for improved device usage</p>
+                    <p class="achievement">Achieved high ratings in customer feedback and optimized call times</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <strong>Full Stack Developer Certification</strong>
+                <p>EGG Online Platform - Argentina Programa Scholarship</p>
+                <small>December 2022 - September 2023</small>
+            </div>
+            <div class="education-item">
+                <strong>Secondary Technical Education</strong>
+                <p>E.E.T n°6 (Technical High School)</p>
+                <p>March 2004 - December 2010</p>
+                <p>Rosario, Santa Fe</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Networking </h4>
+                    <p class="achievement">FTTH Technology</p>
+                    <p class="achievement">Wireless Networks</p>
+                    <p class="achievement">IP Networking (Public/Private)</p>
+                </div>
+
+
+               <div class="skill-category">
+    <h4>Certifications</h4>
+    <div class="certification-item">
+        <p class="achievement"><strong>Full Stack Developer</strong> - EGG Cooperation</p>
+        <p>Argentina Programa 4.0</p>
+        <small>Obtained: October 2023</small>
+    </div>
+    <div class="certification-item">
+        <p class="achievement"><strong>MTCNA</strong> - MikroTik Certified Network Associate</p>
+        <small>Valid until: 2027</small>
+    </div>
+</div>
+                <div class="skill-category">
+                    <h4>Leadership</h4>
+                    <p class="achievement">Technical Team Management</p>
+                    <p class="achievement">Staff Training & Development</p>
+                    <p class="achievement">Problem Solving</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="language-item">
+                <span><strong>English:</strong></span>
+                <span class="language-level">Advanced</span>
+            </div>
+            <div class="language-item">
+                <span><strong>Spanish:</strong></span>
+                <span class="language-level">Native</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
